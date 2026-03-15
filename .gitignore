@@ -1,0 +1,5 @@
+# ignore compiled files
+output/
+
+# ignore java compiled files
+*.class
