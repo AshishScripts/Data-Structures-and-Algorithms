@@ -19,12 +19,16 @@ public class HashSetImplementation {
         HashSet<Integer> set = new HashSet<>();
 
         // Adding hashset elements
-        set.add(1);
+        System.out.println(set.add(1));//true
         set.add(2);
         set.add(3);
         set.add(4);
-        set.add(1);
+        System.out.println(set.add(1));//false
 
+        /*
+        set.add(value)  returns true    if  the value   doesn't exists  already and add it  to  the set
+        if  the value   is  already present then    the value   is  not added   and set.add()   returns false
+         */
         // checking size
         System.out.println("The size of the set is:" + set.size());
 
