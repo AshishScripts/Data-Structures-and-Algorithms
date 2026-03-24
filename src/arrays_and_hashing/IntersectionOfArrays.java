@@ -43,6 +43,32 @@ public class IntersectionOfArrays {
         return resultArray;
     }
 
+    //using Sorting
+
+    public int[] intersectionSorting(int[] nums1, int[] nums2) {
+        ArrayList <Integer> result = new ArrayList<>();
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+
+        for (int i = 0; i < nums1.length; i++) {
+            if (i + 1 < nums1.length && nums1[i] == nums1[i + 1]) {
+                continue;
+            }
+            for (int j = 0; j < nums2.length; j++) {
+                if (j + 1 < nums2.length && nums2[j] == nums2[j + 1]) {
+                    continue;
+                } else if (nums1[i] == nums2[j]) {
+                    result.add(nums1[i]);
+                }
+            }
+
+        }
+        int[] resultArray=new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+                resultArray[i] = result.get(i);
+            }
+        return resultArray;
+}
 
 
     //optimized method  using   hashset and arraylist
@@ -100,6 +126,7 @@ public class IntersectionOfArrays {
         int[]   nums2 = {2,2};
         System.out.println(Arrays.toString(obj.intersectionBruteForce(nums1, nums2)));
         System.out.println(Arrays.toString(obj.intersection(nums1, nums2)));
+        System.out.println(Arrays.toString(obj.intersectionSorting(nums1, nums2)));
         System.out.println(Arrays.toString(obj.intersectionOptimized(nums1, nums2)));
     }
 }
