@@ -4,8 +4,8 @@ package basics;
 public class PatternPrinting {
 
     /*
-     * Pattern 1
-     
+    Pattern 1
+
      * * * * *
      * * * * *
      * * * * *
@@ -13,7 +13,7 @@ public class PatternPrinting {
      * * * * *
 
      */
-    public void squareStarPattern(int n) {
+    void squareStarPattern(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print("* ");
@@ -23,15 +23,16 @@ public class PatternPrinting {
     }
 
     /*
-     * Pattern 2
+
+    Pattern 2
      *
      **
      ***
      ****
      *****
-     *
-     */
-    public void triangleStarPattern(int n) {
+
+    */
+    void triangleStarPattern(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print("* ");
@@ -41,16 +42,16 @@ public class PatternPrinting {
     }
 
     /*
-     * Pattern 3
-     * 1
-     * 12
-     * 123
-     * 1234
-     * 12345
-     *
-     */
+    Pattern 3
+    1
+    12
+    123
+    1234
+    12345
 
-    public void triangleNumberPattern1(int n) {
+    */
+
+    void triangleNumberPattern1(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j+" ");
@@ -60,15 +61,15 @@ public class PatternPrinting {
     }
 
     /*
-     * Pattern 4
-     * 1
-     * 22
-     * 333
-     * 4444
-     * 55555
-     *
-     */
-    public void triangleNumberPattern2(int n) {
+    Pattern 4
+    1
+    22
+    333
+    4444
+    55555
+
+    */
+   void triangleNumberPattern2(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(i  +   " ");
@@ -78,16 +79,16 @@ public class PatternPrinting {
     }
 
     /*
-     * Pattern 5
+    Pattern 5
      *****
      ****
      ***
      **
      *
-     *
-     */
 
-    public void invertedStarTriangleLeft(int n) {
+    */
+
+   void invertedStarTriangleLeft(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n - i + 1; j++) {
                 System.out.print("* ");
@@ -97,15 +98,15 @@ public class PatternPrinting {
     }
 
     /*
-     * Pattern 6
-     * 12345
-     * 1234
-     * 123
-     * 12
-     * 1
-     *
-     */
-    public void invertedNumberTriangleLeft(int n) {
+    Pattern 6
+    12345
+    1234
+    123
+    12
+    1
+
+    */
+    void invertedNumberTriangleLeft(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n - i + 1; j++) {
                 System.out.print(j  +   " ");
@@ -115,15 +116,16 @@ public class PatternPrinting {
     }
 
     /*
-        Pattern   7
-* * * * *
-*       *
-*       *
-*       *
-* * * * *
+    Pattern   7
+
+    * * * * *
+    *       *
+    *       *
+    *       *
+    * * * * *
 
     */
-    public void hollowSquarePattern(int n) {
+    void hollowSquarePattern(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 if (i == 1 || i == n || j == 1 || j == n) {
@@ -138,14 +140,14 @@ public class PatternPrinting {
     /*
 
     Pattern 8
-1
-12
-123
-1234
-12345
+        1
+        12
+        123
+        1234
+        12345
 
     */
-     public  void    triangleNumPattern(int  n){
+    void    triangleNumPattern(int  n){
         for(int i=1;i<=n;i++){
             for(int j=1;j<=i;j++){
                 System.out.print(j);
@@ -156,15 +158,15 @@ public class PatternPrinting {
 
     /*
     Pattern 9
-1
-2 3
-4 5 6
-7 8 9 10
-11 12 13 14 15
+    1
+    2 3
+    4 5 6
+    7 8 9 10
+    11 12 13 14 15
 
     */
 
-    public  void    triangleNumChangingPattern(int  n){
+    void    triangleNumChangingPattern(int  n){
         int count=0;
         for(int i=1;i<=n;i++){
             for(int j=1;j<=i;j++){
@@ -176,15 +178,15 @@ public class PatternPrinting {
 
     /*
     Pattern 10
-12345
-1234
-123
-12
+    12345
+    1234
+    123
+    12
 1
 
     */
 
-     public  void    invertedNumTriangleLeft(int n){
+    void    invertedNumTriangleLeft(int n){
         for(int i=1;i<=n;i++){
             for(int j=1;j<=n-i+1;j++){
                 System.out.print(j);
@@ -277,8 +279,10 @@ public class PatternPrinting {
         }
     }
 
-    /*
-        Pattern   15
+/*
+
+Pattern   15
+
     *
    ***
   *****
@@ -289,7 +293,7 @@ public class PatternPrinting {
    ***
     *
 
-    */
+*/
     void    diamondStarPattern(int  n){
         for(int i=1;i<=n;i++){
             for(int k=1;k<=n-i;k++){
@@ -311,7 +315,357 @@ public class PatternPrinting {
         }
     }
 
+    /* pattern  16
+        1
+        0 1
+        1 0 1
+        0 1 0 1
+    */
+    void  zeroOnetrianglePattern(int    n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                if((i+j)%2==0){
+                    System.out.print(1);
+                }else{
+                    System.out.print(0);
+                }
+            }
+            System.out.println();
+        }
+    }
 
+/*
+
+Pattern   17
+
+    1
+   212
+  32123
+ 4321234
+543212345
+
+*/
+    void    validPalindromePyramid(int  n){
+        for(int i=1;i<=n;i++){
+
+            for(int k=1;k<=n-i;k++){
+                System.out.print(" ");
+            }
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            for(int j=2;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
+/*
+Pattern   18
+
+*       *
+**     **
+***   ***
+**** ****
+*********
+
+*/
+
+    void    twinTrianglePattern(int    n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=2*n-1;j++){
+                if(j>i  && j<2*n-i){
+                    System.out.print(" ");
+                }else{
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+/*
+
+Pattern  19
+
+*         *
+**       **
+***     ***
+****   ****
+***** *****
+***********
+***** *****
+****   ****
+***     ***
+**       **
+*         *
+
+*/
+    void    butterFlyPattern(int    n){
+        //upper half
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=2*n-1;j++){
+                if(j>i  && j<2*n-i){
+                    System.out.print(" ");
+                }else{
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+
+    //lower half
+
+        for(int i=n-1;i>=1;i--){
+            for(int j=1;j<=2*n-1;j++){
+                if(j>i &&  j< 2*n-i){
+                    System.out.print(" ");
+                }else{
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+/*
+Pattern  20
+
+    *
+   **
+  ***
+ ****
+*****
+
+*/
+    void    leftHalfPyramid(int n){
+            for(int i=1;i<=n;i++){
+                for(int k=1;k<=n-i;k++){
+                    System.out.print(" ");
+                }
+                for(int j=1;j<=i;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+    }
+
+/*
+
+Pattern  21
+
+ ****
+  ***
+   **
+    *
+
+*/
+    void    reversedLeftHalfPyramid(int n){
+            for(int i=1;i<=n;i++){
+                for(int k=1;k<=i;k++){
+                    System.out.print(" ");
+                }
+                for(int j=n-i;j>=1;j--){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+    }
+
+
+/*
+
+Pattern  21
+
+*****
+****
+***
+**
+*
+**
+***
+****
+*****
+
+*/
+    void    kPattern(int    n){
+        //upper part
+        for(int i=1;i<=n;i++){
+                for(int j=1;j<=n-i+1;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        for(int i=2;i<=n;i++){
+                for(int j=1;j<=i;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+    }
+
+/*
+
+Pattern  23
+
+1 2 3 4 5 6
+ 2 3 4 5 6
+  3 4 5 6
+   4 5 6
+    5 6
+     6
+    5 6
+   4 5 6
+  3 4 5 6
+ 2 3 4 5 6
+1 2 3 4 5 6
+
+*/
+
+    void    mirrorTrianglePattern(int  n){
+        //uppperHalf
+        for(int i=1;i<=n;i++){
+            for(int k=1;k<=i-1;k++){
+                System.out.print(" ");
+            }
+            for(int j=i;j<=n;j++){
+                System.out.print(j  +   " ");
+            }
+            System.out.println();
+        }
+        //lowerHalf
+        for(int i=n-1;i>=1;i--){
+            for(int k=1;k<=i-1;k++){
+                System.out.print(" ");
+            }
+            for(int j=i;j<=n;j++){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+
+/*
+Pattern 24
+
+    *
+   * *
+  *   *
+ *     *
+*********
+
+*/
+    void    hollowTrianglePattern(int  n){
+        for(int i=1;i<=n;i++){
+            for(int k=1;k<=n-i;k++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++){
+                if(j==1 ||i==n||j==(2*i-1)){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+
+/*
+
+Pattern 25
+
+*********
+ *     *
+  *   *
+   * *
+    *
+   * *
+  *   *
+ *     *
+*********
+*/
+
+    void    hollowHourGlass(int n){
+        //upper part
+        for(int i=n;i>=1;i--){
+            //for   spaces
+            for(int k=1;k<=n-i;k++){
+                System.out.print(" ");
+            }
+            //for   pattern
+            for(int j=1;j<=2*i-1;j++){
+                if(i==n ||    j==1    ||  j==2*i-1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        //Lower part
+        for(int i=2;i<=n;i++){
+            for(int k=1;k<=n-i;k++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++){
+                if(j==1||i==n||j==2*i-1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+/*
+
+Pattern 26
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+
+*/
+    void    hollowDiamondPattern(int    n){
+         for(int i=1;i<=n;i++){
+            for(int k=1;k<=n-i;k++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++){
+                if(j==1 ||j==2*i-1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        for(int i=n-1;i>=1;i--){
+            //for   spaces
+            for(int k=1;k<=n-i;k++){
+                System.out.print(" ");
+            }
+            //for   pattern
+            for(int j=1;j<=2*i-1;j++){
+                if(j==1    ||  j==2*i-1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         PatternPrinting t = new PatternPrinting();
 
@@ -357,5 +711,37 @@ public class PatternPrinting {
         System.out.println("\nPattern   15");
         t.diamondStarPattern(5);
 
+        System.out.println("\nPattern   16");
+        t.zeroOnetrianglePattern(5);
+
+        System.out.println("\nPattern   17");
+        t.validPalindromePyramid(5);
+
+        System.out.println("\nPattern   18");
+        t.twinTrianglePattern(5);
+
+        System.out.println("\nPattern  19");
+        t.butterFlyPattern(6);
+
+        System.out.println("\nPattern  20");
+        t.leftHalfPyramid(5);
+
+        System.out.println("\nPattern  21");
+        t.reversedLeftHalfPyramid(5);
+
+        System.out.println("\nPattern  22");
+        t.kPattern(5);
+
+        System.out.println("\nPattern  23");
+        t.mirrorTrianglePattern(6);
+
+        System.out.println("\nPattern 24");
+        t.hollowTrianglePattern(5);
+
+        System.out.println("\nPattern 25");
+        t.hollowHourGlass(5);
+
+        System.out.println("\nPattern 26");
+        t.hollowDiamondPattern(5);
     }
 }
